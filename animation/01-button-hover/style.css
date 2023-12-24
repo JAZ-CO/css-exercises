@@ -17,3 +17,11 @@ button {
   padding: 16px 24px;
   text-align: center;
 }
+@keyframes hvr{
+  from{font-size: 18px; padding: 16px 24px;}
+  to{font-size: 27px; padding: 24px 32px;}
+}
+button:hover {
+  animation: hvr 0.5s forwards;
+  
+}

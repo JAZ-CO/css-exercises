@@ -25,6 +25,10 @@ button {
   border-radius: 5px;
   font-weight: 600;
 }
+@keyframes popup-modal_animation {
+  from{top: 0%;}
+  to{top: 50%;}
+}
 
 .popup-modal {
   padding: 32px 64px;
@@ -32,7 +36,6 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   position: fixed;
-  top: 50%;
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%);
@@ -40,7 +43,9 @@ button {
   opacity: 0%;
   text-align: center;
 }
-
+.backdrop:checked + .popup-modal {
+  animation: popup-modal_animation 2s forwards;
+}
 .popup-modal p {
   margin-bottom: 24px;
 }
